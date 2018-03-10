@@ -70,8 +70,6 @@ namespace WAES.DataStorage
 
         public void SaveDiffResult(int id, DiffResultBase resultStatus)
         {
-
-
             var stringsToCompareById = GetBytesToCompareById(id);
             stringsToCompareById.DiffResult = resultStatus;
         }
