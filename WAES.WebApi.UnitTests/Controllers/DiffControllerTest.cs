@@ -115,7 +115,7 @@ namespace WAES.WebApi.UnitTests.Controllers
             var controler = GetControler();
             _byteDiffClientMock.Setup(x => x.GetDiffResult(It.IsAny<int>())).Returns(new DiffResult()
             {
-                ByteArrayLenght = 5,
+                ByteArrayLength = 5,
                 ResultStatusString = ConstantStatusStrings.SameSizeWithOffset,
                 OffsetIndexes = new List<int>(new int[]{2,3,7})
             });

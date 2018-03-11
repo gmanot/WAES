@@ -110,7 +110,7 @@ namespace WAES.WebApi.IntegrationTests
                 var responseContent = await response.Content.ReadAsStringAsync();
                 responseContent.Should()
                     .BeEquivalentTo(
-                        "{\"ByteArrayLenght\":3,\"OffsetIndexes\":[2],\"ResultStatusString\":\"Same size with offset\"}");
+                        "{\"ByteArrayLength\":3,\"OffsetIndexes\":[2],\"ResultStatusString\":\"Same size with offset\"}");
             }
         }
 

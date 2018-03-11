@@ -63,7 +63,7 @@ namespace WAES.BusinessLogic
                 var diffResult = new DiffResult
                 {
                     ResultStatusString = ConstantStatusStrings.SameSizeWithOffset,
-                    ByteArrayLenght = bytesToCompare.Left.Length,
+                    ByteArrayLength = bytesToCompare.Left.Length,
                     OffsetIndexes = new List<int>()
                 };
                 for (var i = 0; i < bytesToCompare.Left.Length; i++)

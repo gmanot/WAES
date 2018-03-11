@@ -4,7 +4,7 @@ namespace WAES.Shared
 {
     public class DiffResult : DiffResultBase
     {
-        public int ByteArrayLenght { get; set; }
+        public int ByteArrayLength { get; set; }
         public IList<int> OffsetIndexes { get; set; }
     }
 }

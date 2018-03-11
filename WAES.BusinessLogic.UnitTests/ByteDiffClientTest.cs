@@ -176,7 +176,7 @@ namespace WAES.BusinessLogic.UnitTests
             var diffResult = new DiffResult()
             {
                 ResultStatusString = ConstantStatusStrings.SameSizeWithOffset,
-                ByteArrayLenght = 4,
+                ByteArrayLength = 4,
                 OffsetIndexes = new List<int>(ints)
             };
 
@@ -195,7 +195,7 @@ namespace WAES.BusinessLogic.UnitTests
             // Assert
             returnedId.Should().Equals(id);
             diffResult.ResultStatusString.Should().BeEquivalentTo(ConstantStatusStrings.SameSizeWithOffset);
-            diffResult.ByteArrayLenght.Equals(bytesToCompare.Left.Length);
+            diffResult.ByteArrayLength.Equals(bytesToCompare.Left.Length);
             diffResult.OffsetIndexes.Should().Equal(new List<int>(ints));
         }
 
