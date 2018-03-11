@@ -31,6 +31,14 @@ namespace WAES.BusinessLogic.UnitTests
         }
 
         [Fact]
+        public void TestingGetDiffResult__Returns()
+        {
+            var client = GetClient();
+            _dataStorageClientMock.Setup(x => x.AreBothValuesPresent(It.IsAny<int>())).Returns(false);
+            Assert.Throws<ArgumentNullException>(() => client.GetDiffResult(1));
+        }
+
+        [Fact]
         public void Upsert_ValidRequest_TestingInteraction()
         {
             // Arrange
