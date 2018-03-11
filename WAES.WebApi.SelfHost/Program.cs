@@ -8,19 +8,13 @@ namespace WAES.WebApi.SelfHost
     {
         private static void Main(string[] args)
         {
-            var baseAddress = "http://localhost:9000/";
+            const string baseAddress = "http://localhost:9000/";
 
             // Start OWIN host 
             using (WebApp.Start<Startup>(baseAddress))
             {
-                //todo add proper comment
-                // Create HttpCient and make a request to api/values 
-                //var client = new HttpClient();
-
-                //var response = client.GetAsync(baseAddress + "v1/diff/1").Result;
-
-                //Console.WriteLine(response);
-                //Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+                Console.WriteLine("API is allive on {0}", baseAddress);
+                Console.WriteLine("Press Enter to Exit.");
                 Console.ReadLine();
             }
         }
