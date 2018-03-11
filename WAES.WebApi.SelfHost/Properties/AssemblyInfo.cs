@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WAES.WebApi.IntegrationTests")]
+[assembly: AssemblyTitle("WAES.WebApi.SelfHost")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WAES.WebApi.IntegrationTests")]
+[assembly: AssemblyProduct("WAES.WebApi.SelfHost")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4c6e150d-4ea8-4245-9dbe-98fe55515cfc")]
+[assembly: Guid("efae0060-6c24-4c60-a5d8-87fff8536ff4")]
 
 // Version information for an assembly consists of the following four values:
 //

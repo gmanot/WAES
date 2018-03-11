@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAES.BusinessLogic.UnitTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAES.DataStorage.UnitTests", "WAES.DataStorage.UnitTests\WAES.DataStorage.UnitTests.csproj", "{3A55BAB9-0931-4758-B8D5-88B8D0130579}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAES.WebApi.SelfHost", "WAES.WebApi.SelfHost\WAES.WebApi.SelfHost.csproj", "{EFAE0060-6C24-4C60-A5D8-87FFF8536FF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{3A55BAB9-0931-4758-B8D5-88B8D0130579}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A55BAB9-0931-4758-B8D5-88B8D0130579}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A55BAB9-0931-4758-B8D5-88B8D0130579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFAE0060-6C24-4C60-A5D8-87FFF8536FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFAE0060-6C24-4C60-A5D8-87FFF8536FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFAE0060-6C24-4C60-A5D8-87FFF8536FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFAE0060-6C24-4C60-A5D8-87FFF8536FF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
