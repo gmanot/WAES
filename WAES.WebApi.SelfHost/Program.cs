@@ -13,6 +13,7 @@ namespace WAES.WebApi.SelfHost
             // Start OWIN host 
             using (WebApp.Start<Startup>(baseAddress))
             {
+                //todo add proper comment
                 // Create HttpCient and make a request to api/values 
                 //var client = new HttpClient();
 
