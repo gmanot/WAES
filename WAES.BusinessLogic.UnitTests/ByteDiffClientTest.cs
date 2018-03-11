@@ -23,6 +23,7 @@ namespace WAES.BusinessLogic.UnitTests
         public void TestingGetDiffResult_ValidRequest_Returns()
         {
             var client = GetClient();
+            _dataStorageClientMock.Setup(x => x.AreBothValuesPresent(It.IsAny<int>())).Returns(true);
             _dataStorageClientMock.Setup(x => x.GetDiffResult(It.IsAny<int>()))
                 .Returns(new DiffResultBase() { ResultStatusString = ConstantStatusStrings.Equal });
             var diffResultBase = client.GetDiffResult(1);
