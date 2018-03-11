@@ -47,7 +47,7 @@ namespace WAES.BusinessLogic.UnitTests
             var returnedside = Side.Right;
 
             var client = GetClient();
-            _dataStorageClientMock.Setup(x => x.IsReadyForDiff(It.IsAny<int>())).Returns(false);
+            _dataStorageClientMock.Setup(x => x.AreBothValuesPresent(It.IsAny<int>())).Returns(false);
             _dataStorageClientMock.Setup(x => x.Upsert(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<Side>()))
                 .Callback<int, string, Side>(
                     (x, y, z) =>
@@ -88,7 +88,7 @@ namespace WAES.BusinessLogic.UnitTests
             };
 
             var client = GetClient();
-            _dataStorageClientMock.Setup(x => x.IsReadyForDiff(It.IsAny<int>())).Returns(true);
+            _dataStorageClientMock.Setup(x => x.AreBothValuesPresent(It.IsAny<int>())).Returns(true);
             _dataStorageClientMock.Setup(x => x.GetBytesToCompareById(It.IsAny<int>())).Returns(bytesToCompare);
             _dataStorageClientMock.Setup(x => x.SaveDiffResult(It.IsAny<int>(), It.IsAny<DiffResultBase>()))
                 .Callback<int, DiffResultBase>(
@@ -128,7 +128,7 @@ namespace WAES.BusinessLogic.UnitTests
             };
 
             var client = GetClient();
-            _dataStorageClientMock.Setup(x => x.IsReadyForDiff(It.IsAny<int>())).Returns(true);
+            _dataStorageClientMock.Setup(x => x.AreBothValuesPresent(It.IsAny<int>())).Returns(true);
             _dataStorageClientMock.Setup(x => x.GetBytesToCompareById(It.IsAny<int>())).Returns(bytesToCompare);
             _dataStorageClientMock.Setup(x => x.SaveDiffResult(It.IsAny<int>(), It.IsAny<DiffResultBase>()))
                 .Callback<int, DiffResultBase>(
@@ -172,7 +172,7 @@ namespace WAES.BusinessLogic.UnitTests
             };
 
             var client = GetClient();
-            _dataStorageClientMock.Setup(x => x.IsReadyForDiff(It.IsAny<int>())).Returns(true);
+            _dataStorageClientMock.Setup(x => x.AreBothValuesPresent(It.IsAny<int>())).Returns(true);
             _dataStorageClientMock.Setup(x => x.GetBytesToCompareById(It.IsAny<int>())).Returns(bytesToCompare);
             _dataStorageClientMock.Setup(x => x.SaveDiffResult(It.IsAny<int>(), It.IsAny<DiffResult>()))
                 .Callback<int, DiffResultBase>(

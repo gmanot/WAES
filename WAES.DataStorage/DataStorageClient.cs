@@ -61,9 +61,9 @@ namespace WAES.DataStorage
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public bool IsReadyForDiff(int id)
+        public bool AreBothValuesPresent(int id)
         {
-            var stringsToCompare = GetBytesToCompareById(id);
+            var stringsToCompare = GetBytesToCompareById(id) ?? throw new ArgumentNullException("GetBytesToCompareById(id)");
             return stringsToCompare.Left != null && stringsToCompare.Right != null;
         }
 
@@ -85,15 +85,20 @@ namespace WAES.DataStorage
         /// <returns></returns>
         public BytesToCompare GetBytesToCompareById(int id)
         {
-            return Storage.FirstOrDefault(x => x.Key.Equals(id)).Value;
+            var firstOrDefault = Storage.FirstOrDefault(x => x.Key.Equals(id));
+            return firstOrDefault.Value;
+            //if (Storage.Count > 0)
+            //{
+            //return Storage.FirstOrDefault(x => x.Key.Equals(id)).Value;
+            //}
         }
 
-        /// <summary>
-        /// Saving result into the storage.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="resultStatus"></param>
-        public void SaveDiffResult(int id, DiffResultBase resultStatus)
+            /// <summary>
+            /// Saving result into the storage.
+            /// </summary>
+            /// <param name="id"></param>
+            /// <param name="resultStatus"></param>
+            public void SaveDiffResult(int id, DiffResultBase resultStatus)
         {
             var stringsToCompareById = GetBytesToCompareById(id);
             stringsToCompareById.DiffResult = resultStatus;

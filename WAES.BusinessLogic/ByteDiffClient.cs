@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using WAES.DataStorage;
 using WAES.Shared;
@@ -24,7 +25,7 @@ namespace WAES.BusinessLogic
         {
             var decodedString = Encoding.UTF8.GetString(arrayBytes);
             _dataStorageClient.Upsert(id, decodedString, side);
-            if (_dataStorageClient.IsReadyForDiff(id))
+            if (_dataStorageClient.AreBothValuesPresent(id))
             {
                 PerformDiff(id);
             }
@@ -37,7 +38,11 @@ namespace WAES.BusinessLogic
         /// <returns></returns>
         public DiffResultBase GetDiffResult(int id)
         {
-            return _dataStorageClient.GetDiffResult(id);
+            if (_dataStorageClient.AreBothValuesPresent(id))
+            {
+                return _dataStorageClient.GetDiffResult(id);
+            }
+            throw new ArgumentNullException();
         }
 
         private void PerformDiff(int id)

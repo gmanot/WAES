@@ -60,7 +60,7 @@ namespace WAES.DataStorage.UnitTests
             var client = GetClient();
             client.Upsert(id, data, side);
             // Act
-            var isReadyForDiff = client.IsReadyForDiff(1);
+            var isReadyForDiff = client.AreBothValuesPresent(1);
             // Assert
             isReadyForDiff.Should().BeFalse();
         }
@@ -76,7 +76,7 @@ namespace WAES.DataStorage.UnitTests
             client.Upsert(id, data, Side.Left);
             client.Upsert(id, data, Side.Right);
             // Act
-            var isReadyForDiff = client.IsReadyForDiff(1);
+            var isReadyForDiff = client.AreBothValuesPresent(1);
             // Assert
             isReadyForDiff.Should().BeTrue();
         }
