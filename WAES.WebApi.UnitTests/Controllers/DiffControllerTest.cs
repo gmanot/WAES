@@ -5,7 +5,7 @@ using FluentAssertions;
 using Moq;
 using WAES.BusinessLogic;
 using WAES.Shared;
-using WAES.WebApi.Controllers;
+using WAES.WebApi.SelfHost;
 using Xunit;
 
 namespace WAES.WebApi.UnitTests.Controllers

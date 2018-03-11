@@ -35,14 +35,14 @@
     <Reference Include="CommonServiceLocator, Version=2.0.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.5.7.3\lib\net46\CommonServiceLocator.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.2.0.2\lib\net45\Microsoft.Owin.dll</HintPath>
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin.Host.HttpListener, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.2.0.2\lib\net45\Microsoft.Owin.Host.HttpListener.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Hosting, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Hosting.2.0.2\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.4.0.0\lib\net451\Microsoft.Owin.Hosting.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -91,6 +91,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DebugAndErrorMessages.cs" />
     <Compile Include="DiffController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,10 +114,6 @@
     <ProjectReference Include="..\WAES.Shared\WAES.Shared.csproj">
       <Project>{7816344C-96AC-4949-AD52-460CADD7717F}</Project>
       <Name>WAES.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WAES.WebApi\WAES.WebApi.csproj">
-      <Project>{94163C3F-A8C3-4F16-9D26-25773D8A22C1}</Project>
-      <Name>WAES.WebApi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
